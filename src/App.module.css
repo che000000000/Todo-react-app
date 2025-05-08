@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Montserrat regular';
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat regular';
+  font-size: 18px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+input {
+  font-family: 'Montserrat regular';
+  font-size: 18px;
+}
+
+button {
+  font-family: 'Montserrat regular';
+  font-size: 18px;
+}
+
+.todo_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo_item {
+  display: flex;
+  gap: 5px;
+}
+
+.todo_is_completed {
+  text-decoration: line-through;
+}
+
+.delete_todo {
+  color: #ac3636;
+  cursor: pointer;
+}
+
+.create_todo_form {
+  display: flex;
+  gap: 5px;
+}
+
+.input_todo_text {
+  height: 28px;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  outline: none;
+}
+
+.create_todo_btn {
+  height: 28px;
+  background-color: #fff;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  transition: 130ms;
+}
+
+.create_todo_btn:active {
+  background-color: #ececec;
+}
