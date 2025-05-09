@@ -10,17 +10,17 @@ const todoSlice = createSlice({
         addTodo(state, action) {
             state.todos.push({
                 id: new Date().toISOString(),
-                todoText: action.payload,
+                todoText: action.payload.enteredText,
                 isCompleted: false
             })
         },
 
         removeTodo(state, action) {
-            state.todos = state.todos.filter(todo => todo.id !== action.payload)
+            state.todos = state.todos.filter(todo => todo.id !== action.payload.todoId)
         },
 
         toggleTodoComplete(state, action) {
-            const findedTodo = state.todos.find(todo => todo.id === action.payload)
+            const findedTodo = state.todos.find(todo => todo.id === action.payload.todoId)
             findedTodo.isCompleted = !findedTodo.isCompleted
         }
     }

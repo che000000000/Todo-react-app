@@ -9,7 +9,7 @@ const InputForm = () => {
 
   const handleAddTodo = (enteredText) => {
     if (enteredText.trim() === '') return
-    dispatch(addTodo(enteredText))
+    dispatch(addTodo({enteredText}))
     setEnteredText('')
   }
 

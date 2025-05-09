@@ -7,11 +7,11 @@ const TodoItem = (props) => {
     const dispatch = useDispatch()
 
     const handleTodoComplete = (todoId) => {
-        dispatch(toggleTodoComplete(todoId))
+        dispatch(toggleTodoComplete({todoId}))
     } 
     
     const handleRemoveTodo = (todoId) => {
-        dispatch(removeTodo(todoId))
+        dispatch(removeTodo({todoId}))
     }
 
     return (
