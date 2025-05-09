@@ -1,22 +1,21 @@
-import React from 'react'
 import styles from './TodoList.module.css'
 import TodoItem from '../TodoItem/TodoItem'
+import { useSelector } from 'react-redux'
 
-const TodoList = (props) => {
+const TodoList = () => {
+    const todos = useSelector(state => state.todos.todos)
     return (
         <ul className={styles.container}>
-            {props.todos.map(todo => {
+            {todos.length !== 0 ? todos.map(todo => {
                 return (
                     <TodoItem
                         key={todo.id}
                         todoId={todo.id}
                         isCompleted={todo.isCompleted}
                         todoText={todo.todoText}
-                        toggleTodoComplete={props.toggleTodoComplete}
-                        deleteTodo={props.deleteTodo}
                     />
                 )
-            })}
+            }) : <div>{`No one todo(`}</div>}
         </ul>
     )
 }
