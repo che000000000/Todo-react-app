@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  gap: 5px;
+}
+
+.todo_is_completed {
+  text-decoration: line-through;
+}
+
+.delete_todo {
+  color: #ac3636;
+  cursor: pointer;
+}

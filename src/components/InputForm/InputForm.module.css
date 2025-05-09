@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  gap: 5px;
+}
+
+.input_todo_text {
+  height: 28px;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  outline: none;
+}
+
+.create_todo_btn {
+  height: 28px;
+  background-color: #fff;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  transition: 130ms;
+}
+
+.create_todo_btn:active {
+  background-color: #ececec;
+}
